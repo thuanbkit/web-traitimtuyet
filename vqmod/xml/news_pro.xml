@@ -1,0 +1,141 @@
+<!-- Created using vQmod XML Generator by UKSB - http://www.opencart-extensions.co.uk //-->
+<modification>
+	<id><![CDATA[News_Pro]]></id>
+	<version><![CDATA[1.5.4.1]]></version>
+	<vqmver><![CDATA[2.1.7]]></vqmver>
+	<author><![CDATA[VinaEcom]]></author>
+	<file name="admin/view/template/common/header.tpl">
+		<operation>
+			<search position="after" error="log" regex="false"><![CDATA[<li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>]]></search>
+			<add><![CDATA[<li><a class="parent"><?php echo $text_news; ?></a>
+            <ul>
+              <li><a href="<?php echo $news; ?>"><?php echo $text_news; ?></a></li>
+              <li><a href="<?php echo $news_category; ?>"><?php echo $text_news_category; ?></a></li>
+              <li><a href="<?php echo $news_comment; ?>"><?php echo $text_news_comment; ?></a></li>
+            </ul>
+          </li>]]></add>
+		</operation>
+	</file>
+	<file name="admin/controller/common/header.php">
+		<operation>
+			<search position="after" error="log" regex="false"><![CDATA[$this->data['text_zone'] = $this->language->get('text_zone');]]></search>
+			<add><![CDATA[$this->data['text_news'] = $this->language->get('text_news');
+		$this->data['text_news_category'] = $this->language->get('text_news_category');
+		$this->data['text_news_comment'] = $this->language->get('text_news_comment');]]></add>
+		</operation>
+		<operation>
+			<search position="after" error="log" regex="false"><![CDATA[$this->data['zone'] = $this->url->link('localisation/zone', 'token=' . $this->session->data['token'], 'SSL');]]></search>
+			<add><![CDATA[$this->data['news'] = $this->url->link('catalog/news', 'token=' . $this->session->data['token'], 'SSL');
+			$this->data['news_category'] = $this->url->link('catalog/news_category', 'token=' . $this->session->data['token'], 'SSL');
+			$this->data['news_comment'] = $this->url->link('catalog/news_comment', 'token=' . $this->session->data['token'], 'SSL');]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/english/common/header.php">
+		<operation>
+			<search position="after" error="log" regex="false"><![CDATA[$_['text_zone']]]></search>
+			<add><![CDATA[$_['text_news']        			= 'News';
+$_['text_news_category']  	= 'News Categories';
+$_['text_news_comment']  	= 'News Comments';]]></add>
+		</operation>
+	</file>
+	<file name="admin/language/vietnamese/common/header.php">
+		<operation>
+			<search position="after" error="log" regex="false"><![CDATA[$_['text_zone']]]></search>
+			<add><![CDATA[$_['text_news']        			= 'Tin tức';
+$_['text_news_category']  	= 'Danh mục tin tức';
+$_['text_news_comment']  	= 'Nhận xét';]]></add>
+		</operation>
+	</file>
+	<file name="catalog/view/theme/default/template/common/header.tpl">
+		<operation>
+			<search position="after" index="1"><![CDATA[
+			<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet.css" />
+			]]></search>
+			<add trim="true"><![CDATA[
+			<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/stylesheet_news.css" />
+			]]></add>
+		</operation>
+		<operation>
+			<search position="before"><![CDATA[</ul></div>]]></search>
+			<add><![CDATA[<?php if ($categoriesnews) { ?>
+    <?php foreach ($categoriesnews as $cat) { ?>
+	 <?php if($cat['cat_id'] == $cat_id){ ?>
+		<li><a class="active" href="<?php echo $cat['href']; ?>"><?php echo $cat['name']; ?></a>
+	 <?php }else{ ?>
+	 	<li><a href="<?php echo $cat['href']; ?>"><?php echo $cat['name']; ?></a>
+	<?php } ?>	
+      <?php if ($cat['children']) { ?>
+      <div>
+        <?php for ($i = 0; $i < count($cat['children']);) { ?>
+        <ul>
+          <?php $j = $i + ceil(count($cat['children']) / $cat['column']); ?>
+          <?php for (; $i < $j; $i++) { ?>
+          <?php if (isset($cat['children'][$i])) { ?>
+          <li><a href="<?php echo $cat['children'][$i]['href']; ?>"><?php echo $cat['children'][$i]['name']; ?></a></li>
+          <?php } ?>
+          <?php } ?>
+        </ul>
+        <?php } ?>
+      </div>
+      <?php } ?>
+    </li>
+    <?php } ?>
+	<?php } ?>]]></add>
+		</operation>
+	</file>
+	<file name="catalog/controller/common/header.php">
+		<operation>
+			<search position="before"><![CDATA[$this->children = array(]]></search>
+			<add><![CDATA[if (isset($this->request->get['catid'])) {
+			$partnews = explode('_', (string)$this->request->get['catid']);
+		} else {
+			$partnews = array();
+		}
+		
+		if (isset($partnews[0])) {
+			$this->data['cat_id'] = $partnews[0];
+		} else {
+			$this->data['cat_id'] = 0;
+		}
+
+		$this->load->model('catalog/news_category');
+		$this->load->model('catalog/news');
+		
+		$this->data['categoriesnews'] = array();
+					
+		$categoriesnews = $this->model_catalog_news_category->getNewsCategories(0);
+		
+		foreach ($categoriesnews as $cat) {
+			if ($cat['top']) {
+				$childrennews_data = array();
+				
+				$childrennews = $this->model_catalog_news_category->getNewsCategories($cat['news_category_id']);
+				$news_totals = $this->model_catalog_news->getTotalNewsByCategory($cat['news_category_id']);
+				foreach ($childrennews as $childnews) {	
+					$news_total = $this->model_catalog_news->getTotalNewsByCategory($childnews['news_category_id']);
+					if($childnews['image']!='') {
+						$image = $childnews['image'];			
+					}else{
+						$image = $cat['image'];			
+					}
+					
+					$childrennews_data[] = array(
+						'name'  => $childnews['name'] . ($this->config->get('config_product_count') ? ' (' . $news_total . ')' : ''),
+						'image'    	=> $image,
+						'href'  	=> $this->url->link('news/news_category', 'cat_id=' . $cat['news_category_id'] . '_' . $childnews['news_category_id'])	
+					);					
+				}
+				
+				// Level 1
+				$this->data['categoriesnews'][] = array(
+					'name'     => $cat['name'],
+					'cat_id'   => $cat['news_category_id'],
+					'children' => $childrennews_data,
+					'column'   => $cat['column'] ? $cat['column'] : 1,
+					'href'     => $this->url->link('news/news_category', 'cat_id=' . $cat['news_category_id'])
+				);
+			}
+		}]]></add>
+		</operation>
+	</file>
+</modification>

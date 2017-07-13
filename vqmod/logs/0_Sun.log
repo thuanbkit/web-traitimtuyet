@@ -1,0 +1,75 @@
+---------- Date: 2014-09-14 11:26:12 ~ IP : 58.187.87.180 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : /home/cetes/domains/cetes.com.vn/public_html/vqmod/xml/news_pro.xml
+   id        : News_Pro
+   version   : 1.5.4.1
+   vqmver    : 2.1.7
+   author    : VinaEcom
+
+File Name    : catalog/view/theme/default/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): </ul></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-14 11:26:43 ~ IP : 58.187.87.180 ----------
+REQUEST URI : /index.php?route=product/category&amp;path=34
+MOD DETAILS:
+   modFile   : /home/cetes/domains/cetes.com.vn/public_html/vqmod/xml/news_pro.xml
+   id        : News_Pro
+   version   : 1.5.4.1
+   vqmver    : 2.1.7
+   author    : VinaEcom
+
+File Name    : catalog/view/theme/default/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): </ul></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-14 11:27:14 ~ IP : 58.187.87.180 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : /home/cetes/domains/cetes.com.vn/public_html/vqmod/xml/news_pro.xml
+   id        : News_Pro
+   version   : 1.5.4.1
+   vqmver    : 2.1.7
+   author    : VinaEcom
+
+File Name    : catalog/view/theme/default/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): </ul></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-14 11:32:29 ~ IP : 58.187.87.180 ----------
+REQUEST URI : /index.php?route=information/contact
+MOD DETAILS:
+   modFile   : /home/cetes/domains/cetes.com.vn/public_html/vqmod/xml/news_pro.xml
+   id        : News_Pro
+   version   : 1.5.4.1
+   vqmver    : 2.1.7
+   author    : VinaEcom
+
+File Name    : catalog/view/theme/default/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): </ul></div>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2014-09-14 11:33:05 ~ IP : 58.187.87.180 ----------
+REQUEST URI : /index.php?route=information/information&amp;information_id=6
+MOD DETAILS:
+   modFile   : /home/cetes/domains/cetes.com.vn/public_html/vqmod/xml/news_pro.xml
+   id        : News_Pro
+   version   : 1.5.4.1
+   vqmver    : 2.1.7
+   author    : VinaEcom
+
+File Name    : catalog/view/theme/default/template/common/header.tpl(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): </ul></div>
+
+----------------------------------------------------------------------
+
+

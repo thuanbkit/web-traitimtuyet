@@ -1,0 +1,4 @@
+.htabs-content  li { padding:10px 20px ;margin: 0 3px 3px; list-style:none;}
+.htabs-content  li span {cursor:pointer;}
+.htabs-content,.revlslide_setting {padding:0}
+.revlslide_setting p {font-weight:normal !important;}

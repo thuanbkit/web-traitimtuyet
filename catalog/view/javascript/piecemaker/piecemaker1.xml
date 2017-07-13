@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Piecemaker>
+  <Contents><Image Source="http://127.0.0.1/savmarket15/image/cache/data/htc_logo-600x400.jpg" Title="HTC">
+<Hyperlink URL="/index.php?route=product/manufacturer/product&amp;manufacturer_id=5" Target="_blank" />
+</Image><Image Source="http://127.0.0.1/savmarket15/image/cache/data/canon_logo-600x400.jpg" Title="Canon">
+<Hyperlink URL="/index.php?route=product/manufacturer/product&amp;manufacturer_id=9" Target="_blank" />
+</Image><Image Source="http://127.0.0.1/savmarket15/image/cache/data/apple_logo-600x400.jpg" Title="Apple">
+<Hyperlink URL="/index.php?route=product/manufacturer/product&amp;manufacturer_id=8" Target="_blank" />
+</Image><Image Source="http://127.0.0.1/savmarket15/image/cache/data/palm_logo-600x400.jpg" Title="Palm">
+<Hyperlink URL="/index.php?route=product/manufacturer/product&amp;manufacturer_id=6" Target="_blank" />
+</Image><Image Source="http://127.0.0.1/savmarket15/image/cache/data/sony_logo-600x400.jpg" Title="Sony">
+<Hyperlink URL="/index.php?route=product/manufacturer/product&amp;manufacturer_id=10" Target="_blank" />
+</Image><Image Source="http://127.0.0.1/savmarket15/image/cache/data/hp_logo-600x400.jpg" Title="Hewlett-Packard">
+<Hyperlink URL="/index.php?route=product/manufacturer/product&amp;manufacturer_id=7" Target="_blank" />
+</Image></Contents>
+  <Settings ImageWidth="600" ImageHeight="400" LoaderColor="0x333333" InnerSideColor="0x222222" SideShadowAlpha="0.8" DropShadowAlpha="0.7" DropShadowDistance="25" DropShadowScale="0.95" DropShadowBlurX="40" DropShadowBlurY="4" MenuDistanceX="20" MenuDistanceY="50" MenuColor1="0x999999" MenuColor2="0x333333" MenuColor3="0xFFFFFF" ControlSize="50" ControlDistance="20" ControlColor1="0x222222" ControlColor2="0xFFFFFF" ControlAlpha="0.8" ControlAlphaOver="0.95" ControlsX="450" ControlsY="280&#xD;&#xA;" ControlsAlign="center" TooltipHeight="30" TooltipColor="0x222222" TooltipTextY="5" TooltipTextStyle="P-Italic" TooltipTextColor="0xFFFFFF" TooltipMarginLeft="5" TooltipMarginRight="7" TooltipTextSharpness="50" TooltipTextThickness="-100" InfoWidth="400" InfoBackground="0xFFFFFF" InfoBackgroundAlpha="0.95" InfoMargin="15" InfoSharpness="0" InfoThickness="0" Autoplay="4" FieldOfView="45"></Settings> <Transitions><Transition Pieces="21" Time="1.2" Transition="easeOutInQuint" Delay="0.2" DepthOffset="300" CubeDistance="30"></Transition><Transition Pieces="9" Time="1.2" Transition="easeOutQuad" Delay="0.2" DepthOffset="300" CubeDistance="30"></Transition><Transition Pieces="9" Time="1.2" Transition="easeOutSine" Delay="0.2" DepthOffset="300" CubeDistance="30"></Transition><Transition Pieces="12" Time="1.2" Transition="easeOutSine" Delay="0.2" DepthOffset="300" CubeDistance="30"></Transition><Transition Pieces="18" Time="1.2" Transition="easeOutQuad" Delay="0.2" DepthOffset="300" CubeDistance="30"></Transition><Transition Pieces="15" Time="1.2" Transition="easeInCirc" Delay="0.2" DepthOffset="300" CubeDistance="30"></Transition></Transitions></Piecemaker>

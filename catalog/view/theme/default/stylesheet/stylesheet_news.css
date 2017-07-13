@@ -1,0 +1,119 @@
+/* box news for column left and right*/
+.box-news-left {
+margin-bottom: 20px;
+}
+.box-news-left:last-child {
+	border-bottom: none;
+}
+.box-news-left .box-heading {
+  	-webkit-border-radius: 4px 4px 0px 0px;
+
+	-moz-border-radius: 4px 4px 0px 0px;
+
+	-khtml-border-radius: 4px 4px 0px 0px;
+
+	border-radius: 4px 4px 0px 0px;
+
+	border: 1px solid #bbbbbb;
+
+	background: url('../image/background.png') repeat-x;
+
+	padding: 8px 10px 7px 10px;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 14px;
+
+	font-weight: bold;
+
+	line-height: 14px;
+
+	color: #333;
+}
+.box-news-left .box-content {
+background: #FFFFFF;
+
+	-webkit-border-radius: 0px 0px 4px 4px;
+
+	-moz-border-radius: 0px 0px 4px 4px;
+
+	-khtml-border-radius: 0px 0px 4px 4px;
+
+	border-radius: 0px 0px 4px 4px;
+
+	border-left: 1px solid #bbbbbb;
+
+	border-right: 1px solid #bbbbbb;
+
+	border-bottom: 1px solid #bbbbbb;
+
+	padding: 10px;
+}
+
+/* box news */
+.box-news-left .box-product-left {
+	width: 100%;
+	overflow: auto;
+}
+.box-news-left .box-product-left > div {
+
+	float: left;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #EEEEEE;
+	margin-bottom: 12px;
+}
+.box-news-left .box-product-left > div:last-child {
+
+	border-bottom: none;
+
+}
+
+.box-news-left .box-product-left .image {
+	float: left;
+    border: 1px solid #EAEAEA;
+    display: inline-block;
+    outline: medium none;
+    margin-right: 10px;
+}
+.box-news-left .box-product-left .image img {
+	float: left;
+	background: #FFFFFF;
+}
+.box-news-left .box-product-left .name {
+	font-weight: bold;
+}
+
+.box-news-left .box-product-left .short-des {
+	color: #4D4D4D;
+}
+
+.box-news-left .box-product-left .cart{
+	float: right;
+}
+.box-news-left .box-product-left .name a {
+	text-decoration: none;
+	margin-bottom: 4px;
+	color: #38B0E3;
+}
+.box-news-left .box-product-left .name a:hover {
+	color: #fb5b02;
+}
+.box-news-left .box-product-left .name a:hover {
+}
+.box-news-left .box-product-left .price {
+	float: left;
+	color: #3B3B3B;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+.box-news-left .box-product-left .price-old {
+	color: #F00;
+	text-decoration: line-through;
+}
+.box-news-left .box-product-left .price-new {
+	font-weight: bold;
+}
+.box-news-left .box-product-left .rating {
+	display: block;
+	margin-bottom: 4px;
+}

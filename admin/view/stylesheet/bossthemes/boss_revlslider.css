@@ -1,0 +1,5 @@
+#revlslide_setting  li , #revlslide_slider  li, #revlslide_slides  li, #slider_caption li{ padding:10px 20px ; border-top:1px solid #ccc;margin: 0 3px 3px; list-style:none}
+#revlslide_setting  li ul li, #revlslide_slider li ul li , #revlslide_slides li ul li , #slider_caption li ul li{ padding:0 0 8px 0; border:none}
+#revlslide_setting ul, #revlslide_slider ul, #slider_caption ul { padding-top:10px; clear:both}
+#revlslide_setting  li a.active, #revlslide_slider li a.active , #slider_caption li a.active{ color:#af0600}
+#revlslide_setting  li h3, #revlslide_setting  li h4 , #revlslide_slider li h3, #revlslide_slider li h4{ font-weight:normal; margin-bottom:5px}

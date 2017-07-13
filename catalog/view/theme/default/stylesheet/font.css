@@ -1,0 +1,10 @@
+﻿
+@font-face {
+  font-family: 'helvetica-idesignVn';
+  src: url('fonts/HelveticaiDesignVn-BdCn.eot?35660553');
+  src: url('fonts/HelveticaiDesignVn-BdCn.eot?35660553#iefix') format('embedded-opentype'),
+       url('fonts/HelveticaiDesignVn-BdCn.woff?35660553') format('woff'),
+       url('fonts/HelveticaiDesignVn-BdCn.ttf?35660553') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
